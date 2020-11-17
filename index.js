@@ -102,7 +102,7 @@ const adminCollection = client.db("Apartment-hunt").collection("adminCollection"
                  console.log(err);
                  res.status(500).send({ msg: "Failed to uploaded image" });
                 }
-                console.log(result);
+                res.send(result.insertedCount > 0)
             });
         });
     });
